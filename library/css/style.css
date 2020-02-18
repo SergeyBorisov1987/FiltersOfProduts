@@ -1,0 +1,108 @@
+body{
+    padding: .5%;
+}
+div{
+    margin: 5px auto;
+    text-align: center;
+}
+.pagination
+{
+    margin: 0 auto;
+}
+.list-group{
+    margin: 5px auto;
+
+}
+.list-group-item{
+    text-align: center; 
+}
+.dropdown-toggle{
+    width: 250px;
+    height: 45px;
+}
+.dropdown-menu{
+    width: 250px; 
+}
+.dropdown-item{
+    text-align: center;
+}
+.btn-lg{
+    width: 250px;
+}
+/* showwing main product */
+.product-list{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+}
+.product-up{
+    margin: .1%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 1fr;
+}
+.product-description{
+    margin: .1%;
+    padding: 2%;   
+}
+.prod-name{
+    font-size:2.5em;
+    font-weight: bolder;
+    text-align: center;
+    color: rgb(44, 43, 43);
+}
+.badge{
+    margin-left: 10px;  
+}
+.prod-price{
+    font-size: 2em;
+    font-weight: bolder;
+    text-align: center;
+    color: rgb(44, 43, 43);   
+}
+.prod-other-info{
+    margin: 0 auto;
+    padding: 1%;   
+}
+.jumbotron{
+    margin: 1%;
+}
+.dropdown{
+    margin: 5% auto;
+}
+/* price rang */
+.title{
+    margin: 5%;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+}
+.form-control-range{
+    margin: 5%;
+    width: 200px;
+}
+#custom-handle {
+    width: 3em;
+    height: 1.6em;
+    top: 50%;
+    margin-top: -.8em;
+    text-align: center;
+    line-height: 1.6em;
+  }
+  #amount{
+    border:0;
+    color:#f6931f;
+    font-weight:bold;
+  }
+  .price-range{
+      margin: 2%;
+  }
+#slider-range{
+    width: 200px;
+}
+/* all filters */
+  button.dropdown-toggle{
+      font-size: 1.4em;
+  }
