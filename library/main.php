@@ -32,8 +32,24 @@ if (isset($_POST['category'])){
     $stmtFirstShowProduct = $pdo->query($sqlFirstShowProduct);
         while ($selectFirstShowProduct = $stmtFirstShowProduct->fetch(PDO::FETCH_ASSOC)){
             $AjaxFirstShowProduct[] = $selectFirstShowProduct;
-        }      
-    echo  json_encode($AjaxFirstShowProduct);
+        }
+        $totalProducts = count($AjaxFirstShowProduct);
+            echo  json_encode($AjaxFirstShowProduct);
+                //var_dump($AjaxParams);
+}else{}
+
+// total products for pafinatio   //echo  json_encode($AjaxFirstShowProduct);
+if (isset($_POST['totalPagin'])){
+    $idCat = +$_POST['totalPagin'];
+$sqlAjaxParams = "SELECT COUNT(id) FROM product WHERE cat_id = 2 UNION ALL SELECT MIN(prod_price) FROM product WHERE cat_id = 2  UNION ALL SELECT MAX(prod_price) FROM product WHERE cat_id = 2";       
+
+$stmtAjaxParams = $pdo->query($sqlAjaxParams);
+    while ($selectAjaxParams = $stmtAjaxParams->fetch(PDO::FETCH_ASSOC)){
+        $AjaxParams[] = $selectAjaxParams;
+    }
+    $totalProducts = count($AjaxParams);
+        echo  json_encode($AjaxParams);
+            //var_dump($AjaxParams);
 }else{}
 
 // FILTER PRICE RANGE               echo  json_encode($AjaxPriceRange);  

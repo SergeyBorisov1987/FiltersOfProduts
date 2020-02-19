@@ -105,4 +105,12 @@ div{
 /* all filters */
   button.dropdown-toggle{
       font-size: 1.4em;
-  }
+}
+div.content-pagin{
+    width: 400px;
+    height: 150px;
+    margin: 0 auto;
+}
+span.pagin{
+    margin: 0 auto;
+}

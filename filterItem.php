@@ -37,10 +37,10 @@
                     </li>
                     <li class="nav-item dropdown">
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#"></a>
+                        <a class="dropdown-item" href="#"></a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#"></a>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -75,12 +75,12 @@
             <div class="dropdown">
         <?php while ($selectAttrType= $stmtAttrType->fetch()): ?>
         <button id="<?php echo $idAttrType = $selectAttrType['id']; ?>" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <?php echo $selectAttrType['attr_type_name']; $idAttrType = intval($idAttrType);?>
+            <?php echo $selectAttrType['attr_type_name'];?>
         </button>                                    
         <?php $sqlAttrVal = "SELECT DISTINCT attr_value_name FROM relationship WHERE attr_type_id = $idAttrType";
                 if ($stmtAttrVal = $pdo->query($sqlAttrVal)):?>   
                     <?php  while ($selectAttrVal = $stmtAttrVal->fetch()): ?>
-                        <a id="<?php echo  $selectAttrVal ['attr_value_name'];?>" class="dropdown-item" href="#">
+                        <a id="<?php echo  $selectAttrVal ['attr_value_name'];?>" class="dropdown-item" href="/<?php echo $selectAttrType['attr_type_name'];?>=<?php echo  $selectAttrVal ['attr_value_name'];?>">
                             <?php echo  $selectAttrVal ['attr_value_name'];?>
                         </a>
                     <?php endwhile;?>
@@ -99,20 +99,18 @@
             echo "<h1 id='$catId' class='headTitle'>".$arrayHead ."</h1></br></hr>";
         ?>
 <!-- End showing header of catalog -->
-<!-- Showing main content all products -->          
+<!-- Showing main content all products -->
+            <div id="loop">
                 <div class="product-list"></div>
+            </div>                                  
 <!-- End showing main content all products-->
 <!-- Pagination -->
                     <div class="content-pagin">
-                            <nav class="pagination" aria-label="...">
+                            <span class="pagin" aria-label="...">
                                 <ul class="pagination pagination-lg">
-                                    <li id="1" class="page-item-disabled"><a class="page-link" href="#">1</a></li>
-                                    <li id="2" class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li id="3" class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li id="4" class="page-item"><a class="page-link" href="#">4</a></li>
-                                    <li id="5" class="page-item"><a class="page-link" href="#">5</a></li>
+                                    <!-- <li id="1" class="page-item-disabled"><a class="page-link" href="#">1</a></li> -->
                                 </ul>
-                            </nav>
+                            </span>
                     </div>
 <!-- END pagination -->
     </div>
