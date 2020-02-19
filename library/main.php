@@ -33,9 +33,8 @@ if (isset($_POST['category'])){
         while ($selectFirstShowProduct = $stmtFirstShowProduct->fetch(PDO::FETCH_ASSOC)){
             $AjaxFirstShowProduct[] = $selectFirstShowProduct;
         }
-        $totalProducts = count($AjaxFirstShowProduct);
-            echo  json_encode($AjaxFirstShowProduct);
-                //var_dump($AjaxParams);
+        echo  json_encode($AjaxFirstShowProduct);
+            //var_dump($AjaxParams);
 }else{}
 
 // total products for pafinatio   //echo  json_encode($AjaxFirstShowProduct);
@@ -47,7 +46,6 @@ $stmtAjaxParams = $pdo->query($sqlAjaxParams);
     while ($selectAjaxParams = $stmtAjaxParams->fetch(PDO::FETCH_ASSOC)){
         $AjaxParams[] = $selectAjaxParams;
     }
-    $totalProducts = count($AjaxParams);
         echo  json_encode($AjaxParams);
             //var_dump($AjaxParams);
 }else{}
@@ -93,7 +91,5 @@ if (isset($_POST['character']) && isset($_POST['categoryId'])){
     echo  json_encode($AjaxTypeFilter);
 }else{}
 // end filter
-
-
 
 //                            END  AJAX
