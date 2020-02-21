@@ -3,7 +3,6 @@ body{
 }
 div{
     margin: 5px auto;
-    text-align: center;
 }
 .pagination
 {
@@ -30,10 +29,11 @@ div{
     width: 250px;
 }
 /* showwing main product */
-.product-list{
+.default{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto;
+    border-bottom: 3px solid rgb(255, 136, 0);
 }
 .product-up{
     margin: .1%;
@@ -67,6 +67,7 @@ div{
 }
 .jumbotron{
     margin: 1%;
+    text-align: center;
 }
 .dropdown{
     margin: 5% auto;
@@ -78,6 +79,12 @@ div{
     text-decoration: none;
     text-align: center;
     font-weight: bold;
+}
+.headTitle{
+    margin: 2%;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
 }
 .form-control-range{
     margin: 5%;
@@ -99,7 +106,9 @@ div{
   .price-range{
       margin: 2%;
   }
+  
 #slider-range{
+    margin: 0 auto;
     width: 200px;
 }
 /* all filters */
@@ -111,6 +120,31 @@ div.content-pagin{
     height: 150px;
     margin: 0 auto;
 }
-span.pagin{
+.content-pagin{
     margin: 0 auto;
+}
+.form-check{
+    /* padding: 10px 10px 10px 5px; */
+    margin-left: 25px;
+}
+.form-check-label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 1em;
+    color: rgb(70, 66, 66);
+}
+.form-check-input:active{
+        font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 1em;
+    color: rgb(214, 6, 6);
+}
+.form-check-label:hover{
+    color:rgb(255, 136, 0);
+}
+.dropdown-toggle:hover{
+    color:rgb(255, 136, 0);
+}
+#loop{
+    margin-bottom: 3%;
 }

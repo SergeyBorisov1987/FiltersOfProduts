@@ -80,9 +80,13 @@
         <?php $sqlAttrVal = "SELECT DISTINCT attr_value_name FROM relationship WHERE attr_type_id = $idAttrType";
                 if ($stmtAttrVal = $pdo->query($sqlAttrVal)):?>   
                     <?php  while ($selectAttrVal = $stmtAttrVal->fetch()): ?>
-                        <a id="<?php echo  $selectAttrVal ['attr_value_name'];?>" class="dropdown-item" href="/<?php echo $selectAttrType['attr_type_name'];?>=<?php echo  $selectAttrVal ['attr_value_name'];?>">
-                            <?php echo  $selectAttrVal ['attr_value_name'];?>
-                        </a>
+                            <div class="form-check">
+                            <label class="form-check-label" for="defaultCheck1">
+                                <input class="form-check-input" type="checkbox" value="<?php echo $selectAttrVal['attr_value_name'];?>" id="/<?php echo $selectAttrType['attr_type_name'];?>=<?php echo $selectAttrVal['attr_value_name'];?>">
+                                    
+                                            <?php echo $selectAttrVal['attr_value_name'];?>
+                                    </label>
+                            </div>
                     <?php endwhile;?>
                     <br><hr/>
                 <?php endif;?>
@@ -100,6 +104,12 @@
         ?>
 <!-- End showing header of catalog -->
 <!-- Showing main content all products -->
+            <?php 
+                // $URL = $_SERVER['REQUEST_URI'];
+                // $URLdecode = urldecode($URL); 
+                // $Pattern='~cat[a-z]+=[0-9]+/[a-zA-ZА-Яа-яёі]{3}~';
+                // if 
+            ?>
             <div id="loop">
                 <div class="product-list"></div>
             </div>                                  
